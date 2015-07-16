@@ -10,7 +10,9 @@ RUN yum -y update && \
 
 ADD setup.sh /tmp/setup.sh
 
-RUN chmod 777 /tmp/setup.sh && /tmp/setup.sh && rm -f /tmp/setup.sh
+RUN chmod 777 /tmp/setup.sh
+RUN /tmp/setup.sh
+RUN rm -f /tmp/setup.sh
 
 # Run
 CMD /bin/bash
