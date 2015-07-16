@@ -16,7 +16,7 @@ RUN echo unixpower Auth-Type:=Local, Cleartext-Password:=\"password\" >> /etc/ra
 RUN echo >> /etc/raddb/users
 RUN sed -i -e "s/\tpassword = \"radpass\"/\tpassword = \"$MYSQL_PASSWORD\"/" /etc/raddb/sql.conf
 RUN sed -i -e "s/#\t\$INCLUDE sql.conf/\t\$INCLUDE sql.conf/" /etc/raddb/radiusd.conf
-RUN sed -i -e "/\t#  See \"Authorization Queries\" in sql.conf/{n \
+RUN sed -i -e "/\t#  See \"Authorization Queries\" in sql.conf/{n 
     s/#\tsql/\tsql/} " /etc/raddb/sites-available/default
 RUN sed -i -e "/\t#  See \"Accounting queries\" in sql.conf/{n \
     s/#\tsql/\tsql/} " /etc/raddb/sites-available/default
