@@ -8,8 +8,6 @@ echo >> /etc/raddb/users
 echo unixpower Auth-Type:=Local, Cleartext-Password:=\"password\" >> /etc/raddb/users
 echo >> /etc/raddb/users
 
-sed -i -e "s/\tpassword = \"radpass\"/\tpassword = \"$MYSQL_PASSWORD\"/" /etc/raddb/sql.conf
-
 sed -i -e "s/#\t\$INCLUDE sql.conf/\t\$INCLUDE sql.conf/" /etc/raddb/radiusd.conf
 
 sed -i -e "/\t#  See \"Authorization Queries\" in sql.conf/{n
