@@ -2,6 +2,7 @@ FROM centos:centos6
 
 MAINTAINER coleman <coleman_dlut@hotmail.com>
 
+ENV MYSQL_SERVER=
 ENV MYSQL_PASSWORD=
 
 RUN yum -y update && \
@@ -15,4 +16,7 @@ RUN /tmp/setup.sh
 RUN rm -f /tmp/setup.sh
 
 # Run
-CMD /bin/bash
+ADD run.sh /opt/run.sh
+RUN chmod 700 /opt/run.sh
+
+CMD /opt/run.sh

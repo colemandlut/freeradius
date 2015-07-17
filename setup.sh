@@ -23,3 +23,5 @@ s/#\tsql/\tsql/} " /etc/raddb/sites-available/inner-tunnel
 
 sed -i -e "/\t#  See \"Simultaneous Use Checking Queries\" in sql.conf/{n
 s/#\tsql/\tsql/} " /etc/raddb/sites-available/inner-tunnel
+
+
