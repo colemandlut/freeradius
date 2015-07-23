@@ -5,6 +5,9 @@ MAINTAINER coleman <coleman_dlut@hotmail.com>
 ENV MYSQL_SERVER=
 ENV MYSQL_PASSWORD=
 
+ENV CLIENT_IP=172.17.0.0/16
+ENV CLIENT_PASSWORD=testing123
+
 RUN yum -y update && \
     yum -y install freeradius freeradius-utils freeradius-mysql && \
     yum clean all
