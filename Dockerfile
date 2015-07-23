@@ -19,4 +19,6 @@ RUN rm -f /tmp/setup.sh
 ADD run.sh /opt/run.sh
 RUN chmod 700 /opt/run.sh
 
+EXPOSE 1812/udp
+
 CMD /opt/run.sh
